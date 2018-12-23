@@ -1,0 +1,13 @@
+keras 				- 2.24
+tensorflow 			- 1.12.0
+numpy 				- 1.15.2
+open-cv (cv2) 		- 3.4.4
+gym 				- 0.10.9
+cmake (for atari-py)
+atari-py 
+
+NOTE:
+1. For windows, install atari-py using 
+$ pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py
+
+2. Run Keras on a TensorFlow backend and not a Theano backend (since both backends follow slightly different syntax for channels)
