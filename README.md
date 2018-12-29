@@ -16,7 +16,9 @@ model.py – contains the code for running the DDQN (Double Deep Q Network) arch
 
 preprocess.py – This file contains methods for preprocessing the frames of the video games (downscaling and stacking frames).
 
-Saved.h5 - The trained neural network is stored in saved.h5. This network is automatically loaded when the user inputs 2 for simulating the game. 
-
 playingSpaceInvaders.mp4 – A video of the trained agent playing the game.
 
+NOTE - Although the code was written for SpaceInvaders-v0 Atari Game, you can use the exact same code for any other atari game
+(such as `'Pong-v4', 'Breakout-v0'` etc.).  
+
+Also note that I haven't provided my trained network, so you will have to first train your model.
