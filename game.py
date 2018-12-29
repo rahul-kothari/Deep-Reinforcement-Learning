@@ -1,4 +1,3 @@
-import warnings
 import numpy as np
 import gym
 from model import DDQN
@@ -27,9 +26,9 @@ class Game(object):
 		self.MAX_STEPS =  50000 		   	#max steps taken every episode/epoch
 		
 		### Preprocessing Hyperparameters
-		self.stack_size = 3					#stacking 3 frames at once.					
+		self.stack_size = 4					#stacking 3 frames at once.					
 		self.stacked_frames = deque([np.zeros((84,84), dtype=np.int) 
-					for i in range(self.stack_size)], maxlen=3)	
+					for i in range(self.stack_size)], maxlen=4)	
 					
 		### Model
 		self.dqn = DDQN(self.action_space)
@@ -136,6 +135,5 @@ class Game(object):
 		self.env.close() # to avoid sys.meta_path error
 
 if __name__ == '__main__' :
-	warnings.filterwarnings("ignore") #ignore warnings.
 	spaceInvader = Game('SpaceInvaders-v0',train_or_test=2)
 	

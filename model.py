@@ -8,19 +8,19 @@ from collections import deque
 class DDQN(object):
 	"""The Model implementing Deep Q Learning."""
 	
-	def __init__(self, num_actions, input_shape=(84, 84, 3)): 
+	def __init__(self, num_actions, input_shape=(84, 84, 4)): 
 		""" Initialize the model, create its architecture.
 		Parameters
 		------------
 		num_actions : int 
 			length of the action_space of the environment
-		input_shape : (int,int,int) (default: (84,84,3))
-			The shape of the state. Stack of 3 states of 84X84 pixels.		
+		input_shape : (int,int,int) (default: (84,84,4))
+			The shape of the state. Stack of 4 states of 84X84 pixels.		
 		"""
 		
 		### Model Hyperparameters
-		self.INPUT_STATE_SIZE = input_shape # frame is 84x84 with 3 channels 
-											# (since stacking 3 frames)
+		self.INPUT_STATE_SIZE = input_shape # frame is 84x84 with 4 channels 
+											# (since stacking 4 frames)
 		self.NUM_ACTIONS = num_actions		# action_space.n of env
 		### Exploration Hyperparameters
 		self.epsilon = 1					# determines if agent should 
